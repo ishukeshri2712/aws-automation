@@ -12,7 +12,7 @@ for INSTANCE in $INSTANCES; do
   if [ "$TAGS" == "[]" ]; then
     echo "Instance $INSTANCE has no tags. Tagging it with $TAG_KEY=$TAG_VALUE"
     
-    aws ec2 create-tags \ --resources $INSTANCE \ --tags Key=$TAG_KEY,Value=$TAG_VALUE
+    aws ec2 create-tags --resources $INSTANCE --tags Key=$TAG_KEY,Value=$TAG_VALUE
   else
     echo "Instance $INSTANCE is already tagged."
   fi
