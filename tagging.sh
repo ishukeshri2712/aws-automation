@@ -1,7 +1,7 @@
 #!/bin/bash
 
-TAG_KEY="Environment"
-TAG_VALUE="Production"
+TAG_KEY="wiz"
+TAG_VALUE="exclude"
 
 INSTANCES=$(aws ec2 describe-instances --query "Reservations[*].Instances[*].[InstanceId]" --output text)
 
